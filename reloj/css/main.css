@@ -1,0 +1,102 @@
+.outer-face {
+    background: white;
+    border: 5px solid pink;
+    border-radius: 50%;
+    height: 200px;
+    position: relative;
+    width: 200px;
+}
+
+.outer-face::before,
+.outer-face::after,
+.outer-face .marker {
+    background: black;
+    content: "";
+    height: 100%;
+    margin-left: -4px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 8px;
+    z-index: 0;
+}
+
+.outer-face::after {
+    transform: rotate(90deg);
+}
+
+.outer-face .marker {
+    background: gray;
+    margin-left: -3px;
+    width: 6px;
+}
+
+.outer-face .marker.oneseven {
+    transform: rotate(30deg);
+}
+
+.outer-face .marker.twoeight {
+    transform: rotate(60deg);
+}
+
+.outer-face .marker.fourten {
+    transform: rotate(120deg);
+}
+
+.outer-face .marker.fiveeleven {
+    transform: rotate(150deg);
+}
+
+.inner-face {
+    background: white;
+    border-radius: 1000px;
+    height: 88%;
+    left: 6%;
+    position: relative;
+    top: 6%;
+    width: 88%;
+    z-index: 1000;
+}
+
+.inner-face::before {
+    background: black;
+    border-radius: 18px;
+    content: "";
+    height: 18px;
+    margin-left: -9px;
+    margin-top: -9px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 18px;
+}
+
+.hand,
+.hand#hour {
+    background: black;
+    box-shadow: 0 0 3px gray;
+    height: 30%;
+    margin-left: -2px;
+    left: 50%;
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: bottom;
+    top: 20%;
+    width: 4px;
+    z-index: -1;
+}
+
+.hand#minute {
+    height: 45%;
+    margin-left: -2.5px;
+    top: 5%;
+    width: 5px;
+}
+
+.hand#second {
+    background: pink;
+    height: 50%;
+    margin-left: -1px;
+    top: 0;
+    width: 2px;
+}

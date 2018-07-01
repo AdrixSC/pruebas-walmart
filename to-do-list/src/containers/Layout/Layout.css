@@ -1,0 +1,55 @@
+    .Layout {
+        max-width: 1366px;
+        margin: 0 auto;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    
+    .List {
+        background-color: rgb(162, 192, 224);
+        float: left;
+        padding: 10px;
+        margin: 15px;
+        width: 15%;
+    }
+    
+    button {
+        background-color: rgb(29, 130, 207);
+        border-radius: 5px;
+        border-color: rgb(29, 130, 207);
+        color: white;
+        font-size: 15px;
+        padding: 10px 20px 10px 20px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    /*Media Query*/
+    
+    @media (max-width: 640px) {
+        .List {
+            background-color: rgb(7, 107, 179);
+            bottom: 0;
+            height: 60px;
+            margin: 0%;
+            overflow: -webkit-paged-x;
+            overflow: -moz-paged-x;
+            padding: 0%;
+            position: fixed;
+            width: 100%;
+        }
+        .List form {
+            height: 60px;
+            width: auto;
+        }
+        .checkbox {
+            color: white;
+            float: left;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            width: 100px;
+        }
+        .checkbox:hover {
+            background-color: rgb(29, 130, 207);
+        }
+    }

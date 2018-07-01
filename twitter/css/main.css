@@ -1,0 +1,13 @@
+.responsive-img {
+    width: 50%;
+}
+
+.message-container {
+    text-align: center;
+}
+
+.textarea {
+    border: 2px solid pink;
+    margin-top: 15px;
+    padding: 10px;
+}

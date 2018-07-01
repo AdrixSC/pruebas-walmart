@@ -1,0 +1,33 @@
+.Footer {
+    background-color: rgb(180, 179, 179);
+    padding: 10px;
+    clear: both;
+    overflow: hidden;
+    position: relative;
+}
+
+.Id {
+    display: inline;
+    margin-right: 65%;
+}
+
+.Users {
+    display: inline;
+}
+
+
+/*Media Query*/
+
+@media (max-width: 640px) {
+    .Footer {
+        height: 30px;
+        position: fixed;
+        top: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .Id {
+        display: inline;
+        margin-right: 35%;
+    }
+}
