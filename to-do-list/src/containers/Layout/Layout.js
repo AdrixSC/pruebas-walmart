@@ -7,7 +7,7 @@ import axios from 'axios';
 
 //arreglo para los items de los checkbox de acuerdo al número de ID´s que tiene el endpoint
 const itemsCheck = [
-    1, 2
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
     // 'ID TWO',
     // 'ID THREE',
     // 'ID FOUR',
@@ -58,24 +58,25 @@ class Layout extends Component {
         formSubmitEvent.preventDefault(); // evitará que se recargue la página
 
         for (const checkbox of this.selectedCheckboxes) { // itera los checkbox para registrar cada elemento al que el usuario seleccione
-            console.log(checkbox, 'is selected.');
-            const newData = {...this.state.data};
-            const dataCard = this.state.data;
-            console.log("clon", newData)
-            let  userData = [];
+            console.log("check seleccionado", checkbox);
+            const newData = {...this.state.data}; // generando una variable con una copia de la data, para no mutarla en el state
+            const dataCard = this.state.data; // guardando el estado de la data en una nueva variable
+            let  userData = [ ]; // variable para agregar la información del usuario de acuerdo a la condición
             dataCard.map(item => {
                 //console.log(item)
-                const user = item.userId;
-                console.log('user',user)
+                const user = item.userId; // guardando el userId para hacer la comparación con el checkbox
+                //console.log('user',user)
                 if (user === checkbox) {
-                    newData = dataCard;
-                    console.log("newdata", newData)
-                    //userData.push(user)
-                    //console.log("push", user)
+                    console.log("si son iguales")
+                    userData.push(dataCard)
+                    newData = dataCard; // intentando actualizar el estado...
+                    console.log("newdata", newData);
+                    console.log("push", user);
+                    //console.log("dataCard", dataCard);
                 }
             })
-        }
-    }
+        };
+    };
 
     // funcion para definir las propiedades de cada checkbox
     createCheckbox = label => (
